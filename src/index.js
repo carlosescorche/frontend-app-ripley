@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import socketIOClient from "socket.io-client";
+
+//Estableciendo conexión socket.io
+window.socket = socketIOClient('https://app-ripley-desafio.herokuapp.com');
+
+window.socket.on('connect',function(){
+    console.log('cliente conectado')
+})
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
