@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import socketIOClient from "socket.io-client";
 
-//Estableciendo conexión socket.io
+//Estableciendo conexión socket
 window.socket = socketIOClient('https://app-desafio-ripley.herokuapp.com/');
 
 window.socket.on('connect',function(){
